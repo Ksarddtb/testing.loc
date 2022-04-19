@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class StudentClass extends Model
 {
     use HasFactory;
+    protected $fillable=['name'];
     /**
      * Get all of the comments for the StudentClass
      *
