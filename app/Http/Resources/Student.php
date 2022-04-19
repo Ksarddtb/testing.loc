@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\StudentClass;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class Student extends JsonResource
@@ -21,8 +22,8 @@ class Student extends JsonResource
             'student_class_id'=>$this->student_class_id,
             'created_at' => (string) $this->created_at,
             'updated_at' => (string) $this->updated_at,
-            'classroom'=>$this->classes,
-            'lection'=>$this->lection,
+            // 'classroom'=>$this->classes,
+            'classroom'=>StudentClass::whereid($this->student_class_id)->with('lection')->first(),
         ];
     }
 }
