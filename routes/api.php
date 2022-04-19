@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::apiResource('student',StudentController::class);
 Route::apiResource('classroom',StudentClassController::class);
+Route::POST('classroom/lection',[StudentClassController::class,'store_lection']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

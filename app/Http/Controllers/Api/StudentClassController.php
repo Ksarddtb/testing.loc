@@ -43,4 +43,19 @@ class StudentClassController extends Controller
         $classroom->delete();
         return response()->json('deleted',200);
     }
+    public function store_lection(Request $request,StudentClass $classroom)
+    {
+        $rules=[
+            'lection_id'=>'required|numeric|exist:lections,id',
+        ];
+        $validator=Validator::make($request->all(),$rules);
+        if ($validator->fails()) {
+            return response()->json($validator->errors(),400);
+        }
+        \App\Models\Studyplan::create([
+            'student_class_id'=>$classroom->id,
+            'lection_id'=>$request->input('lection_id'),
+        ]);
+        return new ResourceClass($classroom);
+    }
 }
