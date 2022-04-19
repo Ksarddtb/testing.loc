@@ -17,7 +17,8 @@ class LectionFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->jobTitle(),
+            'name' => $this->faker->sentence(),
+            'description'=>$this->faker->text(),
         ];
     }
 }

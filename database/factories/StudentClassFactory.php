@@ -17,8 +17,8 @@ class StudentClassFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->jobtitle(),
-            'description'=>$this->facker->text(),
+            'name' => $this->faker->city(),
+
         ];
     }
 }
