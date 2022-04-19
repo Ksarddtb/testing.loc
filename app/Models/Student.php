@@ -14,8 +14,13 @@ class Student extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+    protected $fillable=['name','email','student_class_id'];
     public function classes()
     {
         return $this->belongsTo(StudentClass::class, 'student_class_id', 'id');
+    }
+    public function lection()
+    {
+        return $this->belongsToMany(lection::class, 'studyplans','student_class_id','lection_id');
     }
 }
