@@ -18,4 +18,6 @@ class StudentClass extends Model
     {
         return $this->hasMany(Student::class, 'student_class_id', 'id');
     }
+
+
 }
