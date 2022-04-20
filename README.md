@@ -15,6 +15,9 @@ config .env<br>
 php artisan key:generate<br>
 php artisan migrate<br>
 php artisan db:seed<br>
+Lection.postman_collection<br>
+class.postman_collection<br>
+student.postman_collection<br>
 </div>
 
 
