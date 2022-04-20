@@ -8,13 +8,14 @@
 </p>
 
 ## About Laravel
-clone git 
-composer i
-config .env
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-
+<div>
+clone git <br>
+composer i <br>
+config .env<br>
+php artisan key:generate<br>
+php artisan migrate<br>
+php artisan db:seed<br>
+</div>
 <a href="https://www.getpostman.com/collections/0334d1fc4d5fb13efc2e">posman link </a>
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
