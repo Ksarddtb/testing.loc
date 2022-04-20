@@ -45,17 +45,23 @@ class StudentClassController extends Controller
     }
     public function store_lection(Request $request,StudentClass $classroom)
     {
-        $rules=[
-            'lection_id'=>'required|numeric|exist:lections,id',
-        ];
-        $validator=Validator::make($request->all(),$rules);
-        if ($validator->fails()) {
-            return response()->json($validator->errors(),400);
-        }
-        \App\Models\Studyplan::create([
-            'student_class_id'=>$classroom->id,
-            'lection_id'=>$request->input('lection_id'),
-        ]);
+        $plan=new \App\Models\Studyplan();
+        $plan->lection_id=$request->input('lection_id');
+        $plan->student_class_id=$classroom->id;
+        $plan->save();
+        return new ResourceClass($classroom);
+    }
+    public function delete_lection(Request $request,StudentClass $classroom)
+    {
+        $plan=\App\Models\Studyplan::where('lection_id',$request->input('lection_id'))->where('student_class_id',$classroom->id)->delete();
+        return new ResourceClass($classroom);
+    }
+    public function update_lection(Request $request,StudentClass $classroom)
+    {
+        $plan=\App\Models\Studyplan::where('lection_id',$request->input('old_lection_id'))->where('student_class_id',$classroom->id)->first();
+        // dd($plan);
+        $plan->lection_id=$request->input('lection_id');
+        $plan->save();
         return new ResourceClass($classroom);
     }
 }

@@ -70,18 +70,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
-    {
 
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request,Student $student)
     {
         $rules=[
@@ -97,16 +86,16 @@ class StudentController extends Controller
         return new ResourcesStudent($student);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Student $student)
     {
         $student->delete();
         return response()->json('deleted',200);
+    }
+    public function changeclass(Request $request,Student $student)
+    {
+        $student->student_class_id=$request->input('student_class_id');
+        $student->save();
+        return new ResourcesStudent($student);
     }
 
 }
