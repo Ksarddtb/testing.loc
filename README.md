@@ -19,7 +19,7 @@ Lection.postman_collection<br>
 class.postman_collection<br>
 student.postman_collection<br>
 </div>
-
+<a href="https://app.getpostman.com/join-team?invite_code=7fe579fa421909fb19b1018ab7f1c80e&target_code=0e56c70692676825327adeaf74f4989c">Posman Collection></a>
 
 <br><br>
 <br>
