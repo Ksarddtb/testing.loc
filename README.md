@@ -22,6 +22,16 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Learning Laravel
+clone git 
+composer i
+config .env
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+
+<a href="https://www.getpostman.com/collections/0334d1fc4d5fb13efc2e">posman link </a>
+
+
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
