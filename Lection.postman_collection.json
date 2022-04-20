@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "664ed604-da22-4b83-9b1f-88b18f1c148a",
+		"name": "Lection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/lection",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"lection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lection edit one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/lection/18",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"lection",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lection add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/lection?name=Bakhtiyor Ibatov1&description=test1@mail.ruasdas asdasdasd a daskldaklsdas dkasjdnaksjndjkasd",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"lection"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bakhtiyor Ibatov1"
+						},
+						{
+							"key": "description",
+							"value": "test1@mail.ruasdas asdasdasd a daskldaklsdas dkasjdnaksjndjkasd"
+						},
+						{
+							"key": "student_class_id",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lection update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testing.loc/api/lection/101?name=Bakhtiyor Ibatov1&description=asdsdasdasdasdasdasdasdasdasdasdasdasdasdas",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"lection",
+						"101"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bakhtiyor Ibatov1"
+						},
+						{
+							"key": "description",
+							"value": "asdsdasdasdasdasdasdasdasdasdasdasdasdasdas"
+						},
+						{
+							"key": "id",
+							"value": "202",
+							"disabled": true
+						},
+						{
+							"key": "method",
+							"value": "PATCH",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lection Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/lection/101",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"lection",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

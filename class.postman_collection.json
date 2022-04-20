@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "ed14028f-5935-45d6-abc5-01e42a2f128d",
+		"name": "class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Class alls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/classroom",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Class Edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/classroom/10",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/classroom?name=2002 group11",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "2002 group11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add lection for Class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/classroom/lection/5?lection_id=10",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom",
+						"lection",
+						"5"
+					],
+					"query": [
+						{
+							"key": "lection_id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Class",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testing.loc/api/classroom/11?name=20523423sefdfw",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom",
+						"11"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "20523423sefdfw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Class lection",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testing.loc/api/classroom/lection/10?old_lection_id=21&lection_id=10",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom",
+						"lection",
+						"10"
+					],
+					"query": [
+						{
+							"key": "old_lection_id",
+							"value": "21"
+						},
+						{
+							"key": "lection_id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Class",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/classroom/11",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Class Lection",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://testing.loc/api/classroom/lection/5?lection_id=10",
+					"protocol": "http",
+					"host": [
+						"testing",
+						"loc"
+					],
+					"path": [
+						"api",
+						"classroom",
+						"lection",
+						"5"
+					],
+					"query": [
+						{
+							"key": "lection_id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

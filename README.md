@@ -16,7 +16,7 @@ php artisan key:generate<br>
 php artisan migrate<br>
 php artisan db:seed<br>
 </div>
-<a href="https://www.getpostman.com/collections/0334d1fc4d5fb13efc2e">posman link </a>
+
 
 <br><br>
 <br>
